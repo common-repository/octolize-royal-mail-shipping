@@ -1,0 +1,17 @@
+-
+  compensation: 20.00
+  tax: 0
+  prices:
+    letter:
+      100: 0.68
+    large_letter:
+      100: 1.05
+      250: 1.65
+      500: 2.15
+      750: 2.70
+    small_parcel:
+      2000: 3.35
+    medium_parcel:
+      2000: 5.35
+      10000: 6.95
+      20000: 10.45

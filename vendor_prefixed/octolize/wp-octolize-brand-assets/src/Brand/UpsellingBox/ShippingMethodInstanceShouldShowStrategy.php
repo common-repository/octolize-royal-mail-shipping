@@ -1,0 +1,8 @@
+<?php
+
+namespace OctolizeShippingRoyalMailVendor\Octolize\Brand\UpsellingBox;
+
+use OctolizeShippingRoyalMailVendor\WPDesk\ShowDecision\WooCommerce\ShippingMethodInstanceStrategy;
+class ShippingMethodInstanceShouldShowStrategy extends ShippingMethodInstanceStrategy
+{
+}

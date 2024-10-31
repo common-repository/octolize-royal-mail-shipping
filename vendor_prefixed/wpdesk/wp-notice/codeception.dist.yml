@@ -1,0 +1,31 @@
+paths:
+    tests: tests/codeception/tests
+    output: tests/codeception/tests/_output
+    data: tests/codeception/tests/_data
+    support: tests/codeception/tests/_support
+    envs: tests/codeception/tests/_envs
+actor_suffix: Tester
+extensions:
+    enabled:
+        - OctolizeShippingRoyalMailVendor\Codeception\Extension\RunFailed
+#        - OctolizeShippingRoyalMailVendor\Codeception\Extension\Recorder:
+#              module: WPWebDriver
+#              delete_successful: false # keep screenshots of successful tests
+    commands:
+        - OctolizeShippingRoyalMailVendor\Codeception\Command\GenerateWPUnit
+        - OctolizeShippingRoyalMailVendor\Codeception\Command\GenerateWPRestApi
+        - OctolizeShippingRoyalMailVendor\Codeception\Command\GenerateWPRestController
+        - OctolizeShippingRoyalMailVendor\Codeception\Command\GenerateWPRestPostTypeController
+        - OctolizeShippingRoyalMailVendor\Codeception\Command\GenerateWPAjax
+        - OctolizeShippingRoyalMailVendor\Codeception\Command\GenerateWPCanonical
+        - OctolizeShippingRoyalMailVendor\Codeception\Command\GenerateWPXMLRPC
+        - OctolizeShippingRoyalMailVendor\WPDesk\Codeception\Command\GeneratePluginActivation
+        - OctolizeShippingRoyalMailVendor\WPDesk\Codeception\Command\GenerateWooCommerce
+        - OctolizeShippingRoyalMailVendor\tad\Codeception\Command\Steppify
+params:
+    - .env.testing
+coverage:
+    remote: false
+    include:
+        - classes
+        - src
